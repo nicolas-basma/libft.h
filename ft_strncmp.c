@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 20:44:09 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/13 20:52:48 by febasma          ###   ########.fr       */
+/*   Created: 2023/09/14 17:40:16 by febasma           #+#    #+#             */
+/*   Updated: 2023/09/14 17:48:48 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *str, int c)
+int	ft_strncmp(char *str1, char *str2, unsigned int n)
 {
-	int	i;
+	int i = 0;
 
-	i = 0;
-	while (str[i] != '\0')
+	while (str1[i] != '/0' && str2[i] != '/0' && i < n)
 	{
-		if (str[i] == c)
-			return ((char *)str + i);
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
 		i++;
 	}
-	if (str[i] == c)
-		return ((char *)str + i);
 	return (0);
 }
