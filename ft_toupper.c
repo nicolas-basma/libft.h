@@ -6,11 +6,11 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:37:22 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/13 20:40:19 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/15 17:28:03 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+char	*ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{

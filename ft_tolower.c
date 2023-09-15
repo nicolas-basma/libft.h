@@ -6,11 +6,11 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:41:12 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/13 20:42:11 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/15 17:28:16 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+char	*ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
