@@ -6,9 +6,12 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 17:40:16 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/15 18:50:27 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/19 14:20:35 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
+#include <string.h>
 
 int	ft_strncmp(char *str1, char *str2, unsigned int n)
 {
@@ -22,3 +25,13 @@ int	ft_strncmp(char *str1, char *str2, unsigned int n)
 	}
 	return (0);
 }
+
+// int main()
+// {
+// 	char str1[] = "Hello";
+// 	char str2[] = "Hello";
+// 	unsigned int n = 3;
+
+// 	printf("%d", ft_strncmp(str1, str2, n));
+// 	return (0);
+// }

@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+
+#include <stdio.h>
+
 int	ft_isdigit(char *str)
 {
 	int i = 0;
@@ -28,3 +31,11 @@ int	ft_isdigit(char *str)
 	}
 	return (1);
 }
+
+// int main()
+// {
+// 	char str[] = "Hello World";
+// 	int i = ft_isdigit(str);
+// 	printf("%i", i);
+// 	return (0);
+// }

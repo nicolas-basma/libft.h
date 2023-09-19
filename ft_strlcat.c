@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 17:14:30 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/15 18:48:45 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/19 14:19:07 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,12 @@ char	*ft_strlcat(char *dest, char *src, unsigned int n)
 	return (dest);
 }
 
-int main()
-{
-    char dest[50] = "Hello";
-    char src[50] = "World";
-    unsigned int n = 3;
+// int main()
+// {
+//     char dest[50] = "Hello";
+//     char src[50] = "World";
+//     unsigned int n = 3;
 
-    printf("%s", ft_strlcat(dest, src, n));
-    return (0);
-}
+//     printf("%s", ft_strlcat(dest, src, n));
+//     return (0);
+// }

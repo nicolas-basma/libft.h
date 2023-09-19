@@ -6,9 +6,12 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 17:53:37 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/15 18:50:27 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/19 14:08:57 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
+#include <stdio.h>
 
 int	ft_isascii(char *str)
 {
@@ -28,3 +31,11 @@ int	ft_isascii(char *str)
 	}
 	return (1);
 }
+
+// int main()
+// {
+// 	char str[] = "Hello World";
+// 	int i = ft_isascii(str);
+// 	printf("%i", i);
+// 	return (0);
+// }

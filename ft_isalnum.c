@@ -6,9 +6,11 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 00:30:00 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/15 18:49:38 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/19 14:08:12 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 int	ft_isalnum(char *str)
 {
@@ -29,3 +31,11 @@ int	ft_isalnum(char *str)
 	}
 	return (1);
 }
+
+// int main()
+// {
+// 	char str[] = "Hello World";
+// 	int i = ft_isalnum(str);
+// 	printf("%i", i);
+// 	return (0);
+// }

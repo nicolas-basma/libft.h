@@ -6,9 +6,11 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:37:22 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/15 17:28:03 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/19 14:21:26 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 char	*ft_toupper(int c)
 {
@@ -18,3 +20,11 @@ char	*ft_toupper(int c)
 	}
 	return (c);
 }
+
+// int main()
+// {
+// 	char c = 'a';
+// 	char *p = ft_toupper(c);
+// 	printf("%s", p);
+// 	return (0);
+// }
