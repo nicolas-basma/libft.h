@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 17:40:16 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/19 17:25:45 by febasma          ###   ########.fr       */
+/*   Created: 2023/09/19 16:39:11 by febasma           #+#    #+#             */
+/*   Updated: 2023/09/19 17:00:02 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-int	ft_strncmp(const char *str1,const char *str2, unsigned int n)
+char *ft_strdup(char *src)
 {
-	int i = 0;
+   char *dest = malloc(ft_strlen(src) + 1);
 
-	while (str1[i] != '\0' && str2[i] != '\0' && i < n)
-	{
-		if (str1[i] != str2[i])
-			return (str1[i] - str2[i]);
-		i++;
-	}
-	return (0);
+   if (dest == NULL)
+        return (NULL);
+
+    ft_strlcpy(dest, src, ft_strlen(src) + 1);
+    return (dest);
 }
 
-// int main()
-// {
-// 	char str1[] = "Hello";
-// 	char str2[] = "Hello";
-// 	unsigned int n = 3;
-
-// 	printf("%d", ft_strncmp(str1, str2, n));
-// 	return (0);
-// }
+int main()
+{
+    char src[] = "Hello World";
+    //char *dest = ft_strdup(src);
+    char *dest = strdup(src);
+    printf("%s", dest);
+    return (0);
+}
