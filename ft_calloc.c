@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/19 16:39:11 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/22 19:45:49 by febasma          ###   ########.fr       */
+/*   Created: 2023/09/22 18:12:40 by febasma           #+#    #+#             */
+/*   Updated: 2023/09/22 18:41:19 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <libft.h>
+#include "libft.h"
 
-char *ft_strdup(char *src)
+
+void *ft_calloc(size_t nitems, size_t size)
 {
-   char *dest = malloc(ft_strlen(src) + 1);
+    void *ptr;
 
-   if (dest == NULL)
+    ptr = malloc(nitems * size);
+    if (ptr == NULL)
         return (NULL);
 
-    ft_strlcpy(dest, src, ft_strlen(src) + 1);
-    return (dest);
+    ft_bzero(ptr, nitems * size);
+    return (ptr);
 }
 
 int main()
 {
-    char src[] = "Hello World";
-    //char *dest = ft_strdup(src);
-    char *dest = strdup(src);
-    printf("%s", dest);
+    char str[] = "Hello World";
+    int *a;
+
+    a = calloc(6, sizeof(char));
+    
+    //ft_calloc(str, 6);
+    printf("%s", str);
     return (0);
 }
