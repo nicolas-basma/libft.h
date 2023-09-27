@@ -6,20 +6,20 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 16:39:11 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/27 15:35:55 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/27 15:51:03 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Libft.h"
 
-char *ft_strdup(char *str)
+char *ft_strdup(const char *str)
 {
    char *dest = malloc(ft_strlen(str) + 1);
 
    if (dest == NULL)
         return (NULL);
 
-    ft_strlcpy(dest, str, ft_strlen(src) + 1);
+    ft_strlcpy(dest, str, ft_strlen(str) + 1);
     return (dest);
 }
 

@@ -1,10 +1,10 @@
 #ifndef _LIBFT
-#define _LIBFT
+# define _LIBFT
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
+# include <unistd.h>
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *str, int n);
@@ -22,12 +22,11 @@ char	*ft_strdup(const char *str);
 char	*ft_strlcat(char *dest, const char *src, unsigned int n);
 char	*ft_strlcpy(char *dest, const char *src, unsigned int n);
 int		ft_strlen(const char *str);
-char	ft_strncmp(const char *str1, const char *str2, unsigned int n);
+int		ft_strncmp(const char *str1, const char *str2, unsigned int n);
 char	*ft_strnstr(const char *str, const char to_find, unsigned int n);
 char	*ft_strrchr(const char *str, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 void	*ft_calloc(size_t nitems, size_t size);
-
 
 #endif
