@@ -6,15 +6,15 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 19:42:30 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/19 17:35:30 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/27 15:37:18 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "Libft.h"
 
 char	*ft_strnstr(const char *str,const char to_find,unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (str[i] != '\0' && i < n)

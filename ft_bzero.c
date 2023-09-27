@@ -6,12 +6,11 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 20:31:06 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/22 19:49:03 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/27 15:32:54 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
+#include "Libft.h"
 
 void	ft_bzero(void *str, int n)
 {
