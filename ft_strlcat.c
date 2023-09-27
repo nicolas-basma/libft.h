@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 17:14:30 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/19 14:19:07 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/27 16:31:31 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,15 @@
 
 char	*ft_strlcat(char *dest, char *src, unsigned int n)
 {
-	unsigned int i = 0;
-	unsigned int j = 0;
+	unsigned int	i;
+	unsigned int	j;
 
+	i = 0;
+	j = 0;
 	while (dest[i] != '\0')
 	{
 		i++;
 	}
-
 	while (src[j] != '\0' && j < n)
 	{
 		dest[i] = src[j];

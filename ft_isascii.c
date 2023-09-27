@@ -6,20 +6,19 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 17:53:37 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/19 14:08:57 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/27 16:30:03 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include <stdio.h>
 
 int	ft_isascii(char *str)
 {
-	int i = 0;
+	int	i;
 
+	i = 0;
 	if (str[i] == '\0')
 		return (0);
-
 	while (str[i] != '\0')
 	{
 		if ((str[i] >= 0 && str[i] <= 127))

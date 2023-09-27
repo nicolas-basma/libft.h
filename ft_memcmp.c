@@ -1,42 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 18:47:52 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/27 16:31:42 by febasma          ###   ########.fr       */
+/*   Created: 2023/09/27 16:20:06 by febasma           #+#    #+#             */
+/*   Updated: 2023/09/27 16:30:35 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "Libft.h"
 
-char	*ft_strlcpy(char *dest, char *src, unsigned int n)
+int	ft_memcmp(const void *str1, const void *str2, unsigned int n)
 {
 	unsigned int	i;
+	unsigned char	*str1_cpy;
+	unsigned char	*str2_cpy;
 
 	i = 0;
-	while (src[i] != '\0' && i < n)
-	{
-		dest[i] = src[i];
-		i++;
-	}
+	str1_cpy = (unsigned char *)str1;
+	str2_cpy = (unsigned char *)str2;
 	while (i < n)
 	{
-		dest[i] = '\0';
+		if (str1_cpy[i] != str2_cpy[i])
+			return (str1_cpy[i] - str2_cpy[i]);
 		i++;
 	}
-	return (dest);
+	return (0);
 }
 
-// int main()
-// {
-// 	char dest[50] = "Hello";
-// 	char src[50] = "World";
-// 	unsigned int n = 3;
+/*int main()
+{
+    char str1[] = "Hello";
+    char str2[] = "Hello";
+    unsigned int n = 3;
 
-// 	printf("%s", ft_strlcpy(dest, src, n));
-// 	return (0);
-// }
+    printf("%d", ft_memcmp(str1, str2, n));
+    return (0);
+}*/

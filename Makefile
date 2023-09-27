@@ -4,16 +4,22 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-NAME = libft.a
 
 OFILES = ft_*.o
+
+Libft.a: $(NAME)
+	ar rc $(NAME) $(OFILES)
+	ranlib $(NAME)
+
+
 all: $(NAME)
 
 $(NAME):
 	$(CC) $(CFLAGS) -c $(OBJS)
 
 clean:
-	rm -f $(NAME) $(OFILES)
+	rm -f $(OFILES)
 
 fclean: clean
-	rm -f $(NAME)
+
+re: fclean all

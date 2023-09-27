@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 00:30:00 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/19 14:08:12 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/27 16:29:37 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	ft_isalnum(char *str)
 {
-	int i = 0;
+	int	i;
 
+	i = 0;
 	if (str[i] == '\0')
 		return (0);
-
 	while (str[i] != '\0')
 	{
 		if ((str[i] >= '0' && str[i] <= '9') || (str[i] >= 'A' && str[i] <= 'Z')

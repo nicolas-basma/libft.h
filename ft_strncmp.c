@@ -6,16 +6,17 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 17:40:16 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/27 15:36:33 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/27 16:31:51 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Libft.h"
 
-int	ft_strncmp(const char *str1,const char *str2, unsigned int n)
+int	ft_strncmp(const char *str1, const char *str2, unsigned int n)
 {
-	unsigned int i = 0;
+	unsigned int	i;
 
+	i = 0;
 	while (str1[i] != '\0' && str2[i] != '\0' && i < n)
 	{
 		if (str1[i] != str2[i])

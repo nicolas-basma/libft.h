@@ -6,13 +6,13 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 19:42:30 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/27 15:37:18 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/27 16:32:02 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Libft.h"
 
-char	*ft_strnstr(const char *str,const char to_find,unsigned int n)
+char	*ft_strnstr(const char *str, const char to_find, unsigned int n)
 {
 	unsigned int	i;
 

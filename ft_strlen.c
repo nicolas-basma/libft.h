@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 19:30:11 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/19 14:19:57 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/27 16:39:29 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 
 int	ft_strlen(char *str)
 {
-	int i = 0;
+	int	i;
 
+	i = 0;
 	if (str[i] == '\0')
 		return (0);
-
 	while (str[i] != '\0')
 		i++;
 	return (i);

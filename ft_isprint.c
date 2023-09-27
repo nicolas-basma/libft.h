@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 17:59:41 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/19 14:09:58 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/27 16:30:16 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	ft_isprint(char *str)
 {
-	int i = 0;
+	int	i;
 
+	i = 0;
 	if (str[i] == '\0')
 		return (0);
-
 	while (str[i] != '\0')
 	{
 		if ((str[i] >= 32 && str[i] <= 126))

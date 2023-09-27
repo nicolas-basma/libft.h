@@ -6,21 +6,21 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 16:39:11 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/27 15:51:03 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/27 16:36:47 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Libft.h"
 
-char *ft_strdup(const char *str)
+char	*ft_strdup(const char *str)
 {
-   char *dest = malloc(ft_strlen(str) + 1);
+	char	*dest;
 
-   if (dest == NULL)
-        return (NULL);
-
-    ft_strlcpy(dest, str, ft_strlen(str) + 1);
-    return (dest);
+	dest = malloc(ft_strlen(str) + 1);
+	if (dest == NULL)
+		return (NULL);
+	ft_strlcpy(dest, str, ft_strlen(str) + 1);
+	return (dest);
 }
 
 /*int main()

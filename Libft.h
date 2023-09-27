@@ -1,5 +1,17 @@
-#ifndef _LIBFT
-# define _LIBFT
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/27 16:32:18 by febasma           #+#    #+#             */
+/*   Updated: 2023/09/27 16:42:17 by febasma          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef LIBFT_H
+# define LIBFT_H
 
 # include <stdio.h>
 # include <stdlib.h>
@@ -28,5 +40,6 @@ char	*ft_strrchr(const char *str, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 void	*ft_calloc(size_t nitems, size_t size);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 #endif

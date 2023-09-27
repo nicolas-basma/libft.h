@@ -6,22 +6,23 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 18:17:34 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/19 17:18:40 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/27 16:30:48 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-void ft_memcpy(void *dest, const void *src, int size)
+void	ft_memcpy(void *dest, const void *src, int size)
 {
-    int i = 0;
+	int	i;
 
-    while( i < size)
-    {
-        ((char *)dest)[i] = ((char *)src)[i];
-        i++;
-    }
+	i = 0;
+	while (i < size)
+	{
+		((char *)dest)[i] = ((char *)src)[i];
+		i++;
+	}
 }
 
 /*int main()
