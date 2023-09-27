@@ -6,13 +6,14 @@ CFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
 
+OFILES = ft_*.o
 all: $(NAME)
 
 $(NAME):
 	$(CC) $(CFLAGS) -c $(OBJS)
 
 clean:
-	rm -f $(NAME)
+	rm -f $(NAME) $(OFILES)
 
 fclean: clean
 	rm -f $(NAME)

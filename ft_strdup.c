@@ -6,31 +6,28 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 16:39:11 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/22 19:45:49 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/27 15:35:55 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <libft.h>
+#include "Libft.h"
 
-char *ft_strdup(char *src)
+char *ft_strdup(char *str)
 {
-   char *dest = malloc(ft_strlen(src) + 1);
+   char *dest = malloc(ft_strlen(str) + 1);
 
    if (dest == NULL)
         return (NULL);
 
-    ft_strlcpy(dest, src, ft_strlen(src) + 1);
+    ft_strlcpy(dest, str, ft_strlen(src) + 1);
     return (dest);
 }
 
-int main()
+/*int main()
 {
-    char src[] = "Hello World";
+    char str[] = "Hello World";
     //char *dest = ft_strdup(src);
-    char *dest = strdup(src);
+    char *dest = strdup(str);
     printf("%s", dest);
     return (0);
-}
+}*/
