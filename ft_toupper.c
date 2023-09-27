@@ -6,18 +6,16 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:37:22 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/19 14:21:26 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/27 14:58:14 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-char	*ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
-	{
-		c -= 32;
-	}
+		return (c - 32);
 	return (c);
 }
 

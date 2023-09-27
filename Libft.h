@@ -25,8 +25,8 @@ int		ft_strlen(const char *str);
 char	ft_strncmp(const char *str1, const char *str2, unsigned int n);
 char	*ft_strnstr(const char *str, const char to_find, unsigned int n);
 char	*ft_strrchr(const char *str, int c);
-int		*ft_tolower(int c);
-int		*ft_toupper(int c);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
 void	*ft_calloc(size_t nitems, size_t size);
 
 
