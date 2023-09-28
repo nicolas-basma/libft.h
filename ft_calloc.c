@@ -6,11 +6,11 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 18:12:40 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/27 16:33:25 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/28 19:28:10 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Libft.h"
+#include "libft.h"
 
 void	*ft_calloc(size_t nitems, size_t size)
 {

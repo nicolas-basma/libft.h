@@ -6,11 +6,11 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 16:20:06 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/27 16:30:35 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/28 19:28:10 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Libft.h"
+#include "libft.h"
 
 int	ft_memcmp(const void *str1, const void *str2, unsigned int n)
 {

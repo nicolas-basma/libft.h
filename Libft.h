@@ -6,12 +6,12 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 16:32:18 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/27 16:42:17 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/28 20:17:04 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef libft_h
+# define libft_h
 
 # include <stdio.h>
 # include <stdlib.h>
@@ -40,6 +40,9 @@ char	*ft_strrchr(const char *str, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 void	*ft_calloc(size_t nitems, size_t size);
-int		ft_memcmp(const void *s1, const void *s2, size_t n);
+int		ft_memcmp(const void *str1, const void *str2, unsigned int n);
+char    *ft_substr(char const *s, unsigned int start, size_t len);
+char    *ft_strjoin(char const *s1, char const *s2);
+
 
 #endif

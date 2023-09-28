@@ -6,11 +6,11 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 17:40:16 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/27 16:31:51 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/28 19:28:10 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Libft.h"
+#include "libft.h"
 
 int	ft_strncmp(const char *str1, const char *str2, unsigned int n)
 {

@@ -1,33 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 19:30:11 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/28 20:15:51 by febasma          ###   ########.fr       */
+/*   Created: 2023/09/28 18:31:34 by febasma           #+#    #+#             */
+/*   Updated: 2023/09/28 19:28:10 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *str)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	i;
+	unsigned int	i;
+	unsigned int	j;
+	char			*dest;
 
+	dest = (char *)malloc(sizeof(char) * (len + 1));
 	i = 0;
-	if (str[i] == '\0')
-		return (0);
-	while (str[i] != '\0')
+	j = start;
+	if (!s)
+		return (NULL);
+	while (s[j] && j < len)
+	{
+		dest[i] = s[j];
 		i++;
-	return (i);
+		j++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
 
 // int main()
 // {
-// 	char str[] = "Hello World";
-// 	int i = ft_strlen(str);
-// 	printf("%i", i);
-// 	return (0);
+//     char    *s = "substr function Implementation";
+//     char    *dest;
+
+//     dest = ft_substr(s, 7, 12);
+//     printf("%s\n", dest);
+//     return (0);
 // }
