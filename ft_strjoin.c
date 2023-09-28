@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 19:08:01 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/28 19:34:10 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/28 20:34:31 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,28 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	unsigned int i;
 	unsigned int j;
-	unsigned int k;
 	char *dest;
 
 	i = ft_strlen(s1);
 	j = ft_strlen(s2);
-	k = 0;
 	dest = (char *)malloc(sizeof(char) * (i + j + 1));
 	if (!dest)
 		return (NULL);
-	while (s1[k])
+
+    i = 0;
+	while (s1[i])
 	{
-		dest[k] = s1[k];
-		k++;
-	}
-	k = 0;
-	while (s2[k])
-	{
-		dest[i] = s2[k];
+		dest[i] = s1[i];
 		i++;
-		k++;
 	}
-	dest[k] = '\0';
+    j = 0;
+    while(s2[j])
+    {
+        dest[i] = s2[j];
+        j++;
+        i++;
+    }
+    dest[i] = '\0';
 	return (dest);
 }
 
