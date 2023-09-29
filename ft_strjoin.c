@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 19:08:01 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/28 20:34:31 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/29 17:14:50 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (dest);
 }
 
-int main()
-{
-    char    *s1 = "Hello ";
-    char    *s2 = "World";
-    char    *dest;
+// int main()
+// {
+//     char    *s1 = "Hello ";
+//     char    *s2 = "World";
+//     char    *dest;
 
-    dest = ft_strjoin(s1, s2);
-    printf("%s\n", dest);
-    return (0);
+//     dest = ft_strjoin(s1, s2);
+//     printf("%s\n", dest);
+//     return (0);
 
-}
+// }

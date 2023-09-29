@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 16:32:18 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/28 20:17:04 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/29 17:13:49 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,6 @@ void	*ft_calloc(size_t nitems, size_t size);
 int		ft_memcmp(const void *str1, const void *str2, unsigned int n);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
 char    *ft_strjoin(char const *s1, char const *s2);
-
+char   *ft_strtrim(char const *s1, char const *set);
 
 #endif
