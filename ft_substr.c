@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 18:31:34 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/28 19:28:10 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/02 16:55:45 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	j;
 	char			*dest;
 
-	dest = (char *)malloc(sizeof(char) * (len + 1));
-	i = 0;
-	j = start;
 	if (!s)
 		return (NULL);
-	while (s[j] && j < len)
+
+		
+	dest = (char *)malloc(sizeof(char) * (len + 1));
+	if (!dest)
+		return (NULL);
+	i = 0;
+	j = start;
+	while (s[j] && j <= len)
 	{
 		dest[i] = s[j];
 		i++;
