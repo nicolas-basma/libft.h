@@ -11,7 +11,7 @@ $(NAME):
 	$(CREATE) $(NAME) $(OFILES)
 	ranlib $(NAME)
 
-all: $(NAME))
+all: $(NAME)
 clean:
 	$(RM) $(OFILES) $(NAME)
 fclean: clean

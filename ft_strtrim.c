@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 15:50:57 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/02 17:26:32 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/04 19:29:45 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,36 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		j;
-	char	*str;
-    int    lenSet;
-    int     lenStr;
+    char    *str;
+    int     start;
+    int     end;
+    int    i;
+    int     lenSet;
 
-	i = 0;
-	j = ft_strlen(s1);
+    if (!s1 || !set)
+        return (0);
+    start = 0;
+    end = ft_strlen(s1);
     lenSet = ft_strlen(set);
-
-	if (!s1 || !set)
-		return (NULL);
-
-    while(s1[i] && ft_strchr(set, s1[i]))
+    printf("end or = %d\n", end);
+    while(ft_strchr(set, s1[start]))
+        start++;
+    
+    i = end - lenSet;
+    printf("start = %d\n", start);
+    printf("i = %d\n", i);
+    while(ft_strchr(set, s1[i]))
+    {
         i++;
+        end--;
+    }
 
-
-    while(ft_strchr(set[lenSet], s1[j]))
-        j--;
-        lenSet--;
-
-    lenStr = j - i + 1;
-    str = (char *)malloc(sizeof(char) * (j - i + 2));
+    printf("i en bucle = %d\n", i);
+    printf("end = %d\n", end);
+    str = (char *)malloc(sizeof(char) * (end - start + 2));
     if (!str)
-        return (NULL);
-
-    str = ft_substr(s1, i, lenStr);
+        return (0);
+    str = ft_substr(s1, start, end);
     return (str);
 }
 

@@ -6,12 +6,12 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 16:32:18 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/29 17:13:49 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/04 19:34:04 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef libft_h
-# define libft_h
+#ifndef LIBFT_H
+# define LIBFT_H
 
 # include <stdio.h>
 # include <stdlib.h>
@@ -32,7 +32,7 @@ void	ft_memset(void *str, int n, int size);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strdup(const char *str);
 char	*ft_strlcat(char *dest, const char *src, unsigned int n);
-char	*ft_strlcpy(char *dest, const char *src, unsigned int n);
+char	*ft_strlcpy(char *dest,const char *src, unsigned int n);
 int		ft_strlen(const char *str);
 int		ft_strncmp(const char *str1, const char *str2, unsigned int n);
 char	*ft_strnstr(const char *str, const char to_find, unsigned int n);
@@ -44,5 +44,6 @@ int		ft_memcmp(const void *str1, const void *str2, unsigned int n);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
 char    *ft_strjoin(char const *s1, char const *s2);
 char   *ft_strtrim(char const *s1, char const *set);
+char    **ft_split(char const *s, char c);
 
 #endif
