@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 18:31:34 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/05 15:12:56 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/05 16:35:37 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	i = 0;
 	j = start;
-	while (s[j] && j <= len)
+	while (s[j] && i <= len)
 	{
 		dest[i] = s[j];
 		i++;

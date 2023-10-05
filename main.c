@@ -10,7 +10,7 @@
 int	main(void)
 {
 	char *str = "hello world";
-	char *set = "ho";
+	char *set = "rld";
 	char *p = ft_strtrim(str, set);
 	printf("%s", p);
 	return (0);

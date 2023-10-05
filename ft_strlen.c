@@ -6,20 +6,18 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 19:30:11 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/28 20:15:51 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/05 16:17:29 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *str)
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	if (str[i] == '\0')
-		return (0);
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 		i++;
 	return (i);
 }
