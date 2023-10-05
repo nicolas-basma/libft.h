@@ -9,9 +9,8 @@
 
 int	main(void)
 {
-	char *str = "hello world";
-	char *set = "rld";
-	char *p = ft_strtrim(str, set);
-	printf("%s", p);
+	char *str = "hello,world";
+	char c = ',';
+	ft_split(str, c);
 	return (0);
 }
