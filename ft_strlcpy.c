@@ -6,13 +6,13 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:47:52 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/04 18:57:25 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/05 15:11:44 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strlcpy(char *dest,const char *src, unsigned int n)
+char	*ft_strlcpy(char *dest, const char *src, unsigned int n)
 {
 	unsigned int	i;
 

@@ -7,11 +7,11 @@
 //     return (0);
 // }
 
-int main()
+int	main(void)
 {
-    char *str = "hello";
-    char *set = "o";
-    char *p = ft_strtrim(str, set);
-    printf("%s", p);
-    return (0);
+	char *str = "hello world";
+	char *set = "ho";
+	char *p = ft_strtrim(str, set);
+	printf("%s", p);
+	return (0);
 }
