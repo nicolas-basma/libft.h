@@ -6,13 +6,13 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 16:20:06 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/27 16:30:35 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/07 18:12:14 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Libft.h"
+#include "libft.h"
 
-int	ft_memcmp(const void *str1, const void *str2, unsigned int n)
+int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
 	unsigned int	i;
 	unsigned char	*str1_cpy;

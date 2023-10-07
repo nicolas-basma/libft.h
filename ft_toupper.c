@@ -6,11 +6,11 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:37:22 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/27 15:37:25 by febasma          ###   ########.fr       */
+/*   Updated: 2023/09/28 19:28:10 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Libft.h"
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

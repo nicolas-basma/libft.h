@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 20:41:12 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/28 19:28:10 by febasma          ###   ########.fr       */
+/*   Created: 2023/09/29 15:50:57 by febasma           #+#    #+#             */
+/*   Updated: 2023/10/05 16:35:32 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	return (c);
-}
+	char	*str;
+	int		i;
+	int		j;
 
-// int main()
-// {
-// 	char c = 'A';
-// 	char *p = ft_tolower(c);
-// 	printf("%s", p);
-// 	return (0);
-// }
+	if (!s1 || !set)
+		return (NULL);
+	i = 0;
+	j = (ft_strlen(s1) - 1);
+	while (ft_strchr(set, s1[i]))
+		i++;
+	while (ft_strchr(set, s1[j]))
+		j--;
+	str = ft_substr(s1, i, (j - i));
+	return (str);
+}

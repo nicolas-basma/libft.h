@@ -1,41 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 18:47:52 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/05 15:11:44 by febasma          ###   ########.fr       */
+/*   Created: 2023/09/28 18:31:34 by febasma           #+#    #+#             */
+/*   Updated: 2023/10/05 16:35:37 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strlcpy(char *dest, const char *src, unsigned int n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	unsigned int	i;
+	unsigned int	j;
+	char			*dest;
 
+	if (!s)
+		return (NULL);
+	dest = (char *)malloc(sizeof(char) * (len + 1));
+	if (!dest)
+		return (NULL);
 	i = 0;
-	while (src[i] != '\0' && i < n)
+	j = start;
+	while (s[j] && i <= len)
 	{
-		dest[i] = src[i];
+		dest[i] = s[j];
 		i++;
+		j++;
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
+	dest[i] = '\0';
 	return (dest);
 }
 
 // int main()
 // {
-// 	char dest[50] = "Hello";
-// 	char src[50] = "World";
-// 	unsigned int n = 3;
+//     char    *s = "substr function Implementation";
+//     char    *dest;
 
-// 	printf("%s", ft_strlcpy(dest, src, n));
-// 	return (0);
+//     dest = ft_substr(s, 7, 12);
+//     printf("%s\n", dest);
+//     return (0);
 // }

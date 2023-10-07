@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 20:41:12 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/28 19:28:10 by febasma          ###   ########.fr       */
+/*   Created: 2023/10/05 16:47:29 by febasma           #+#    #+#             */
+/*   Updated: 2023/10/07 17:57:36 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+char ft_word_len(char const *s, char c)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	return (c);
+    int i;
+    char *copy;
+
+    i = 0;
+    while(*s != c)
+    {
+        i++;
+        s++;
+    }
+    copy = ft_strlcpy(copy, s, i);
+    return(*copy);
 }
 
-// int main()
-// {
-// 	char c = 'A';
-// 	char *p = ft_tolower(c);
-// 	printf("%s", p);
-// 	return (0);
-// }
+char	**ft_split(char const *s, char c)
+{
+    char **str;
+    char i;
+
+    i = ft_word_len(s,c);
+
+    printf("%c", i);
+  
+    return (0);
+}
