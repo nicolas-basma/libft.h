@@ -6,14 +6,14 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 17:30:49 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/18 18:14:49 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/07 18:14:38 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-void	ft_memset(void *str, int n, int size)
+void	ft_memset(void *str, int n, size_t size)
 {
 	int	i;
 

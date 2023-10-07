@@ -6,13 +6,13 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 20:33:13 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/15 20:37:20 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/07 18:08:24 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	*ft_memchr(const void *str, int c, int n)
+void	*ft_memchr(const void *str, int c, size_t n)
 {
 	int	i;
 

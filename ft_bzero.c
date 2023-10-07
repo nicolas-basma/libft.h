@@ -6,13 +6,13 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 20:31:06 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/28 19:28:10 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/07 18:03:18 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *str, int n)
+void	ft_bzero(void *str, size_t n)
 {
 	int	i;
 
