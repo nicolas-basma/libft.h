@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 16:47:29 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/09 11:51:22 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/09 12:05:00 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char count_size(char const *s, char c)
                 k++;
                 s++;
             }
-        }
+            i++;
         if (*s == c)
         {
             j++;
@@ -45,7 +45,8 @@ char count_size(char const *s, char c)
         }
         i++;
     }
-    printf("%c\n", str[1][0]);
+    str[j][k] = '\0';
+    }
 
     return (0);
 }
