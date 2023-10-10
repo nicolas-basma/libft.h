@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 16:47:29 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/10 18:47:05 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/10 18:50:15 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ char	**ft_split(char const *s, char c)
 				break ;
 			i++;
 		}
+		printf("i = %d\n", i);
 		while (i < len)
 		{
 			if (ft_strchr(&c, s[i]) != NULL)
