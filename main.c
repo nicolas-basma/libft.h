@@ -12,7 +12,7 @@ int	main(void)
 	char *str = "hello,world,malaga,,lujan";
 	char c = ',';
 	char **p;
-	int len;
+	int len = 4;
 	p = ft_split(str, c);
 	for(int i = 0; i < len; i++)
 		printf("%s\n", p[i]);
