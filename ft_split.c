@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 16:47:29 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/10 15:33:56 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/10 15:41:33 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,14 +64,27 @@ int words_len(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
+    int i;
     int words;
-    int words_len;
+    int wrds_len;
+    int index;
 	char **str;
 
     words = number_words(s, c);
     str = (char **)malloc(sizeof(char *) * (words + 1));
     if (str == NULL)
         return (NULL);
+    
+    i = 0;
+    while (i < words)
+    {
+        wrds_len = words_len(s, c);
+        str[i] = (char *)malloc(sizeof(char) * (words_len + 1));
+        if (str[i] == NULL)
+            return (NULL);
+        i++;
+    }
+    
     
 	return (0);
 }
