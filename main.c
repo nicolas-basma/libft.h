@@ -9,7 +9,7 @@
 
 int	main(void)
 {
-	char *str = "hello,world,hello,malaga";
+	char *str = "hello,world,malaga";
 	char c = ',';
 	ft_split(str, c);
 	return (0);
