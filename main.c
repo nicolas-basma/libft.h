@@ -9,8 +9,11 @@
 
 int	main(void)
 {
-	char *str = "hello,world,malaga";
+	char *str = "hello,world,malaga,,lujan";
 	char c = ',';
-	ft_split(str, c);
+	char **p;
+	p = ft_split(str, c);
+	for(int i = 0; i < 4; i++)
+		printf("%s\n", p[i]);
 	return (0);
 }
