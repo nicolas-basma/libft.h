@@ -6,22 +6,20 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 16:47:29 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/11 19:11:39 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/11 19:38:36 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_number_of_words(char const *s, char c)
+int	ft_number_of_words(char const *s, char c, size_t len)
 {
 	int	i;
 	int	old_i;
-	int	len;
 	int	count;
 
 	i = 0;
 	count = 0;
-	len = ft_strlen(s);
 	while (i < len)
 	{
 		while (i < len)
@@ -55,7 +53,7 @@ void	ft_word_len(char const *s, size_t *start, size_t *end, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	int 	i;
+	int		i;
 	size_t	start;
 	size_t	end;
 	int		words;
@@ -64,11 +62,11 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	start = 0;
 	end = 0;
-	words = ft_number_of_words(s, c);
+	words = ft_number_of_words(s, c, ft_strlen(s));
 	str = (char **)malloc(sizeof(char *) * (words + 1));
 	if (str == NULL)
 		return (NULL);
-	while(i < words)
+	while (i < words)
 	{
 		ft_word_len(s, &start, &end, c);
 		str[i] = ft_substr(s, start, end - start - 1);
