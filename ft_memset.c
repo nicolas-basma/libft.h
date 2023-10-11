@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 17:30:49 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/07 18:14:38 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/11 19:59:05 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	ft_memset(void *str, int n, size_t size)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (i <= size)

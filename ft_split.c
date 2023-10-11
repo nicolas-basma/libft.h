@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 16:47:29 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/11 19:38:36 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/11 20:00:41 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_number_of_words(char const *s, char c, size_t len)
 {
-	int	i;
-	int	old_i;
-	int	count;
+	unsigned int	i;
+	unsigned int	old_i;
+	unsigned int	count;
 
 	i = 0;
 	count = 0;

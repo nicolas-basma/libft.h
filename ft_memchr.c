@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 20:33:13 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/07 18:08:24 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/11 19:58:22 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *str, int c, size_t n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (i < n)

@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 18:17:34 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/07 18:07:06 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/11 19:58:44 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (i < n)

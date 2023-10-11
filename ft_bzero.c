@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 20:31:06 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/07 18:03:18 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/11 19:56:33 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *str, size_t n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (i < n)
