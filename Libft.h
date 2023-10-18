@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   Libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 16:32:18 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/17 19:38:51 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/18 15:54:02 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		ft_isprint(int c);
 void	*ft_memchr(void *str, int c, size_t n);
 void	ft_memcpy(void *dest, const void *src, size_t n);
 void	ft_memmove(void *dest, const void *src, int size);
-void	ft_memset(void *str, int n, size_t size);
+void	ft_memset(void *s, int c, size_t size);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strdup(const char *str);
 char	*ft_strlcat(char *dest, const char *src, unsigned int n);
