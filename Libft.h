@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Libft.h                                            :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 16:32:18 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/18 15:54:02 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/19 19:32:17 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
-void	*ft_memchr(void *str, int c, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
 void	ft_memcpy(void *dest, const void *src, size_t n);
 void	ft_memmove(void *dest, const void *src, int size);
 void	ft_memset(void *s, int c, size_t size);
