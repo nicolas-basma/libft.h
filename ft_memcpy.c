@@ -6,14 +6,13 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 18:17:34 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/11 19:58:44 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/19 20:48:09 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-void	ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned int	i;
 
@@ -23,14 +22,5 @@ void	ft_memcpy(void *dest, const void *src, size_t n)
 		((char *)dest)[i] = ((char *)src)[i];
 		i++;
 	}
+	return (dest);
 }
-
-/*int main()
-{
-    char str[] = "Hello World";
-    char str2[] = "Hello Malaga";
-    //memcpy(str, str2, 9); 
-    ft_memcpy(str, str2, 9);
-    printf("%s", str);
-    return (0);
-}*/
