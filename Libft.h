@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 16:32:18 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/19 19:32:17 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/19 19:41:09 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_strrchr(const char *str, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 void	*ft_calloc(size_t nitems, size_t size);
-int		ft_memcmp(const void *str1, const void *str2, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
