@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 16:32:18 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/19 21:50:49 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/23 18:34:57 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_strdup(const char *str);
 size_t	ft_strlcat(char *dest, const char *src, size_t n);
 size_t	ft_strlcpy(char *dest, const char *src, size_t n);
 size_t	ft_strlen(const char *s);
-int		ft_strncmp(const char *str1, const char *str2, unsigned int n);
+int		ft_strncmp(const char *str1, const char *str2, size_t n);
 char	*ft_strnstr(const char *str, const char to_find, unsigned int n);
 char	*ft_strrchr(const char *str, int c);
 int		ft_tolower(int c);
