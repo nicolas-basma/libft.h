@@ -1,12 +1,21 @@
 # LIBFT
-**Primer proyecto como alumno de la escuela 42!**
+**Primer libreria en lenguaje de C!**
 
 ## FUNCIONES DE LA LIBRERIA LIBFT
 
 ### ft_atoi(const char *str)
-*-Convierte una cadena de caracteres a un entero.*
+Parametros<br>
+__const char *str:__ Cadena de caracteres a convertir<br>
+*-Convierte una cadena de caracteres a un entero ( char to int ).*
+
+---------------------------------------
 ### ft_bzero(void *s, size_t n)
+Parametros<br>
+void *s: Puntero a la cadena de caracteres<br>
+size_t n: Numero de caracteres a rellenar con nulos<br>
 *-Rellena una cadena de caracteres con nulos.*
+
+---------------------------------------
 ### ft_calloc(size_t count, size_t size)
 *-Reserva memoria y la rellena con nulos.*
 ### ft_isalnum(int c)
