@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 15:50:57 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/25 23:11:25 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/25 23:13:35 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str = ft_substr(s1, i, j - i + 1);
 	return (str);
 }
-
