@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 19:42:30 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/24 22:47:24 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/25 16:05:19 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,26 +16,20 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 {
 	size_t	i;
 	size_t	j;
+	char	*cpy;
 
 	i = 0;
-	j = 0;
-	while (str[i] != '\0' || i < n)
+	cpy = (char *)str;
+	if (ft_strlen(to_find) == 0)
+		return (cpy);
+	while (str[i] != '\0' && i < n)
 	{
-		if (str[i] == to_find[j] && str[i + 1] == to_find[j + 1])
-		{
+		j = 0;
+		while (str[i + j] == to_find[j] && to_find[j] != '\0' && i + j < n)
+			j++;
+		if (to_find[j] == '\0')
 			return ((char *)str + i);
-		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
-
-// int main()
-// {
-//     char str[] = "Hello World";
-//     char c[] = "";
-//     int n = 10;
-//     printf("%s", ft_strnstr(str, c, n));
-// 	printf("\n%s", strnstr(str, c, n));
-//     return (0);
-// }
