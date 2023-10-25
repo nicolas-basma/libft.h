@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 13:41:39 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/17 19:04:33 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/25 21:00:51 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,32 +21,18 @@ void	ft_swap(char *a, char *b)
 	*b = c;
 }
 
-char	*ft_switch(char *s, int a, int b)
+void	ft_switch(char *s, int a, int b)
 {
 	while (a < b)
-	{
 		ft_swap(&s[a++], &s[b--]);
-	}
-	return (s);
 }
 
 char	*ft_special(int n)
 {
-	char	*z;
-	char	*top;
-
-	z = (char *)malloc(sizeof(char) * 12);
-	if (!z)
-		return (NULL);
-	top = (char *)malloc(sizeof(char) * 12);
-	if (!top)
-		return (NULL);
-	top = "-2147483648";
-	z[0] = '0';
 	if (n == 0)
-		return (z);
+		return (ft_strdup("0"));
 	if (n == -2147483648)
-		return (top);
+		return (ft_strdup("-2147483648"));
 	return (NULL);
 }
 
@@ -56,6 +42,23 @@ int	absolut(int n)
 
 	sign = -1;
 	return (n * sign);
+}
+int	memory(int n)
+{
+	int	i;
+
+	i = 1;
+	if (n < 0)
+	{
+		i++;
+		n = absolut(n);
+	}
+	while (n / 10 > 0)
+	{
+		n /= 10;
+		i++;
+	}
+	return (i);
 }
 
 char	*ft_itoa(int n)
@@ -67,13 +70,13 @@ char	*ft_itoa(int n)
 
 	i = 0;
 	k = n;
-	str = (char *)malloc(sizeof(char) * 10);
-	if (!str)
-		return (NULL);
 	if (n == 0 || n == -2147483648)
 		return (ft_special(n));
 	if (n < 0)
 		k = absolut(k);
+	str = malloc(sizeof(char) * memory(n) + 1);
+	if (!str)
+		return (NULL);
 	while (k)
 	{
 		j = k % 10;
