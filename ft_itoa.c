@@ -6,25 +6,22 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 13:41:39 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/25 21:00:51 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/25 22:37:12 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_swap(char *a, char *b)
+void	ft_switch(char *s, int a, int b)
 {
 	char	c;
 
-	c = *a;
-	*a = *b;
-	*b = c;
-}
-
-void	ft_switch(char *s, int a, int b)
-{
 	while (a < b)
-		ft_swap(&s[a++], &s[b--]);
+	{
+		c = s[a];
+		s[a++] = s[b];
+		s[b--] = c;
+	}
 }
 
 char	*ft_special(int n)
@@ -43,6 +40,7 @@ int	absolut(int n)
 	sign = -1;
 	return (n * sign);
 }
+
 int	memory(int n)
 {
 	int	i;
