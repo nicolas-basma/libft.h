@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 15:50:57 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/05 16:35:32 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/25 23:08:15 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,25 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		i;
 	int		j;
 
-	if (!s1 || !set)
+	if (!s1)
 		return (NULL);
+	if (ft_strlen(s1) <= 0)
+		return (ft_strdup(""));
 	i = 0;
-	j = (ft_strlen(s1) - 1);
+	j = (ft_strlen(s1));
 	while (ft_strchr(set, s1[i]))
 		i++;
 	while (ft_strchr(set, s1[j]))
 		j--;
-	str = ft_substr(s1, i, (j - i));
+	str = ft_substr(s1, i, j - i + 1);
 	return (str);
 }
+
+// int main()
+// {
+// 	char *s1 = "";
+// 	char *set = "";
+// 	printf("%s\n", ft_strtrim(s1, set));
+// 	printf("%zu\n", ft_strlen(s1));
+// 	return 0;
+// }
