@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 18:31:34 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/25 19:47:15 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/26 19:02:06 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	j;
 	char			*dest;
 
-	if (start > ft_strlen(s))
-		return (ft_strdup(""));
 	if (!s)
 		return (NULL);
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
 	if (len > ft_strlen(s) - start)
 		len = ft_strlen(s) - start;
 	dest = (char *)malloc(sizeof(char) * (len + 1));

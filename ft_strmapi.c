@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 16:10:11 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/25 22:19:44 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/26 15:53:13 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*result;
 
 	i = 0;
-	result = ft_strdup(s);
-	while (result[i])
+	if (!s || !f)
+		return (NULL);
+	result = (char *)malloc((sizeof (char)) * ft_strlen(s) + 1);
+	if (!result)
+		return (NULL);
+	while (s[i])
 	{
 		result[i] = (*f)(i, s[i]);
 		i++;
