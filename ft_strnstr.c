@@ -6,33 +6,30 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 19:42:30 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/28 19:28:10 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/25 16:05:19 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *str, const char to_find, unsigned int n)
+char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
+	size_t	j;
+	char	*cpy;
 
 	i = 0;
+	cpy = (char *)str;
+	if (ft_strlen(to_find) == 0)
+		return (cpy);
 	while (str[i] != '\0' && i < n)
 	{
-		if (str[i] == to_find)
-		{
+		j = 0;
+		while (str[i + j] == to_find[j] && to_find[j] != '\0' && i + j < n)
+			j++;
+		if (to_find[j] == '\0')
 			return ((char *)str + i);
-		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
-
-// int main()
-// {
-//     char str[] = "Hello World";
-//     char c = 'o';
-//     int n = 7;
-//     printf("%s", ft_strnstr(str, c, n));
-//     return (0);
-// }

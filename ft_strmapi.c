@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/15 20:31:06 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/11 19:56:33 by febasma          ###   ########.fr       */
+/*   Created: 2023/10/25 16:10:11 by febasma           #+#    #+#             */
+/*   Updated: 2023/10/26 15:53:13 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *str, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
+	char			*result;
 
 	i = 0;
-	while (i < n)
+	if (!s || !f)
+		return (NULL);
+	result = (char *)malloc((sizeof (char)) * ft_strlen(s) + 1);
+	if (!result)
+		return (NULL);
+	while (s[i])
 	{
-		((char *)str)[i] = '\0';
+		result[i] = (*f)(i, s[i]);
 		i++;
 	}
+	result[i] = '\0';
+	return (result);
 }
-
-// int main()
-// {
-//     char str[] = "Hello World";
-//     ft_bzero(str, 6);
-//     printf("%s", str);
-//     return (0);
-// }

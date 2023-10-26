@@ -6,9 +6,9 @@
 ### ft_atoi(const char *str)
 *-Convierte una cadena de caracteres a un entero.*
 ### ft_bzero(void *s, size_t n)
-*-Rellena una cadena de caracteres con ceros.*
+*-Rellena una cadena de caracteres con nulos.*
 ### ft_calloc(size_t count, size_t size)
-*-Reserva memoria y la rellena con ceros.*
+*-Reserva memoria y la rellena con nulos.*
 ### ft_isalnum(int c)
 *-Comprueba si el caracter es alfanumerico.*
 ### ft_isalpha(int c)

@@ -6,35 +6,15 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 16:34:28 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/27 16:34:45 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/17 19:37:05 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_isdigit(char *str)
+int	ft_isdigit(int c)
 {
-	int	i;
-
-	i = 0;
-	if (str[i] == '\0')
-		return (0);
-	while (str[i] != '\0')
-	{
-		if ((str[i] >= '0' && str[i] <= '9'))
-		{
-			i++;
-		}
-		else
-			return (0);
-	}
-	return (1);
+	if (c <= 57 && c >= 48)
+		return (1);
+	return (0);
 }
-
-// int main()
-// {
-// 	char str[] = "Hello World";
-// 	int i = ft_isdigit(str);
-// 	printf("%i", i);
-// 	return (0);
-// }

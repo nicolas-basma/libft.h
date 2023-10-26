@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/15 20:31:06 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/11 19:56:33 by febasma          ###   ########.fr       */
+/*   Created: 2023/10/26 15:54:53 by febasma           #+#    #+#             */
+/*   Updated: 2023/10/26 17:40:16 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *str, size_t n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int	i;
+	int	i;
 
-	i = 0;
-	while (i < n)
-	{
-		((char *)str)[i] = '\0';
-		i++;
-	}
+	i = -1;
+	if (!s || !f)
+		return ;
+	while (s[++i])
+		f(i, &s[i]);
 }
-
-// int main()
-// {
-//     char str[] = "Hello World";
-//     ft_bzero(str, 6);
-//     printf("%s", str);
-//     return (0);
-// }

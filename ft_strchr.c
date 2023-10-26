@@ -6,47 +6,23 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 19:00:46 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/05 15:10:54 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/23 17:29:02 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-
-// char *ft_strchr(const char *str, int c)
-// {
-//     while(*str != '\0')
-//     {
-//         if(*str == c)
-//         {
-//             return ((char *)str);
-//         }
-//         str++;
-//     }
-//     return (0);
-// }
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
+	while (*str)
 	{
-		if (str[i] == c)
+		if (*str == (char)c)
 		{
-			return ((char *)str + i);
+			return ((char *)str);
 		}
-		i++;
+		str++;
 	}
-	return (0);
+	if (*str == (char)c)
+		return ((char *)str);
+	return (NULL);
 }
-
-// int main()
-// {
-// 	char str[] = "Hello World";
-// 	char c = 'l';
-// 	char *p = ft_strchr(str, c);
-// 	printf("%s", p);
-// 	return (0);
-// }

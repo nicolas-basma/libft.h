@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 16:39:11 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/28 19:28:10 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/26 15:46:38 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,14 @@
 char	*ft_strdup(const char *str)
 {
 	char	*dest;
+	size_t	len;
 
-	dest = malloc(ft_strlen(str) + 1);
-	if (dest == NULL)
+	len = ft_strlen(str);
+	if (!str)
 		return (NULL);
-	ft_strlcpy(dest, str, ft_strlen(str) + 1);
+	dest = (char *)malloc(len + 1);
+	if (!dest)
+		return (NULL);
+	ft_memcpy(dest, str, len + 1);
 	return (dest);
 }
-
-/*int main()
-{
-    char str[] = "Hello World";
-    //char *dest = ft_strdup(src);
-    char *dest = strdup(str);
-    printf("%s", dest);
-    return (0);
-}*/

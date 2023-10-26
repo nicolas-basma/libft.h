@@ -6,39 +6,27 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 17:14:30 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/27 16:31:31 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/20 18:29:42 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-char	*ft_strlcat(char *dest, char *src, unsigned int n)
+size_t	ft_strlcat(char *dest, const char *src, size_t n)
 {
-	unsigned int	i;
-	unsigned int	j;
+	size_t	i;
+	size_t	j;
 
-	i = 0;
 	j = 0;
-	while (dest[i] != '\0')
-	{
+	i = 0;
+	while (dest[i] && i < n)
 		i++;
-	}
-	while (src[j] != '\0' && j < n)
+	while (src[j] && i + j + 1 < n)
 	{
-		dest[i] = src[j];
+		dest[i + j] = src[j];
 		j++;
-		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	if (i != n)
+		dest[i + j] = '\0';
+	return (ft_strlen(src) + i);
 }
-
-// int main()
-// {
-//     char dest[50] = "Hello";
-//     char src[50] = "World";
-//     unsigned int n = 3;
-
-//     printf("%s", ft_strlcat(dest, src, n));
-//     return (0);
-// }

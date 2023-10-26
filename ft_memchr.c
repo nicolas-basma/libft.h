@@ -6,33 +6,24 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 20:33:13 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/07 18:08:24 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/26 18:15:24 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void	*ft_memchr(const void *str, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	i;
+	unsigned int	i;
+	unsigned char	*ptr;
 
 	i = 0;
+	ptr = (unsigned char *)s;
 	while (i < n)
 	{
-		if (((char *)str)[i] == c)
-		{
-			return ((char *)str + i);
-		}
+		if (ptr[i] == (unsigned char)c)
+			return (ptr + i);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
-
-// int main()
-// {
-//     char str[] = "Hello World";
-//     char c = 'l';
-//     char *p = ft_memchr(str, c, 5);
-//     printf("%s", p);
-//     return (0);
-// }

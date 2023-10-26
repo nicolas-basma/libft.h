@@ -6,30 +6,34 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 18:30:47 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/27 16:31:00 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/19 21:34:24 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-void	ft_memmove(void *dest, const void *src, int size)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (i < size)
+	if (dest == src)
+		return (dest);
+	if (dest < src)
 	{
-		((char *)dest)[i] = ((char *)src)[i];
-		i++;
+		while (i < n)
+		{
+			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+			i++;
+		}
 	}
+	else
+	{
+		while (n > 0)
+		{
+			((unsigned char *)dest)[n - 1] = ((unsigned char *)src)[n - 1];
+			n--;
+		}
+	}
+	return (dest);
 }
-
-/*int main()
-{
-    char str[] = "Hello World";
-    char str2[] = "Jola Malaga";
-    ft_memmove(str, str2, 3);
-    printf("%s", str);
-    return (0);
-}*/

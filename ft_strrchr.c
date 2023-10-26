@@ -6,36 +6,22 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 19:32:56 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/15 19:38:17 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/26 18:07:45 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strrchr(const char *str, int c)
 {
-	int	i;
-	int	j;
+	int	len;
 
-	i = 0;
-	j = 0;
-	while (str[i] != '\0')
+	len = ft_strlen(str);
+	while (len >= 0)
 	{
-		if (str[i] == c)
-		{
-			j = i;
-		}
-		i++;
+		if (str[len] == (char)c)
+			return ((char *)str + len);
+		len--;
 	}
-	if (str[j] == c)
-	{
-		return ((char *)str + j);
-	}
-	return (0);
+	return (NULL);
 }
-
-// int main()
-// {
-//     char str[] = "Hello World";
-//     char c = 'l';
-//     printf("%s", ft_strrchr(str, c));
-//     return (0);
-// }

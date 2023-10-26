@@ -6,32 +6,20 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 17:40:16 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/28 19:28:10 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/23 19:10:13 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *str1, const char *str2, unsigned int n)
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
-	while (str1[i] != '\0' && str2[i] != '\0' && i < n)
-	{
-		if (str1[i] != str2[i])
-			return (str1[i] - str2[i]);
+	while (str1[i] && str2[i] && str1[i] == str2[i] && i < n)
 		i++;
-	}
+	if (str1[i] != str2[i] && i < n)
+		return ((unsigned char)str1[i] - (unsigned char)str2[i]);
 	return (0);
 }
-
-// int main()
-// {
-// 	char str1[] = "Hello";
-// 	char str2[] = "Hello";
-// 	unsigned int n = 3;
-
-// 	printf("%d", ft_strncmp(str1, str2, n));
-// 	return (0);
-// }

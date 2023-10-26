@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/15 20:31:06 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/11 19:56:33 by febasma          ###   ########.fr       */
+/*   Created: 2023/10/26 17:48:35 by febasma           #+#    #+#             */
+/*   Updated: 2023/10/26 17:51:55 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *str, size_t n)
+void	ft_putstr_fd(char *s, int fd)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while (i < n)
+	while (s[i])
 	{
-		((char *)str)[i] = '\0';
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
 }
-
-// int main()
-// {
-//     char str[] = "Hello World";
-//     ft_bzero(str, 6);
-//     printf("%s", str);
-//     return (0);
-// }

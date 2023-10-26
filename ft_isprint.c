@@ -6,35 +6,15 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 17:59:41 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/27 16:30:16 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/17 19:37:28 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_isprint(char *str)
+int	ft_isprint(int c)
 {
-	int	i;
-
-	i = 0;
-	if (str[i] == '\0')
-		return (0);
-	while (str[i] != '\0')
-	{
-		if ((str[i] >= 32 && str[i] <= 126))
-		{
-			i++;
-		}
-		else
-			return (0);
-	}
-	return (1);
+	if (c <= 126 && c >= 32)
+		return (1);
+	return (0);
 }
-
-// int main()
-// {
-// 	char str[] = "Hello World";
-// 	int i = ft_isprint(str);
-// 	printf("%i", i);
-// 	return (0);
-// }
