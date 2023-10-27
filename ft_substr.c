@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 18:31:34 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/05 16:35:37 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/26 19:02:06 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
 	dest = (char *)malloc(sizeof(char) * (len + 1));
 	if (!dest)
 		return (NULL);
 	i = 0;
 	j = start;
-	while (s[j] && i <= len)
+	while (s[j] && i < len)
 	{
 		dest[i] = s[j];
 		i++;
@@ -34,13 +38,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	dest[i] = '\0';
 	return (dest);
 }
-
-// int main()
-// {
-//     char    *s = "substr function Implementation";
-//     char    *dest;
-
-//     dest = ft_substr(s, 7, 12);
-//     printf("%s\n", dest);
-//     return (0);
-// }

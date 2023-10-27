@@ -6,37 +6,34 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 16:47:29 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/11 20:00:41 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/26 00:40:44 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_number_of_words(char const *s, char c, size_t len)
+int	ft_number_of_words(char const *s, char c)
 {
-	unsigned int	i;
-	unsigned int	old_i;
 	unsigned int	count;
+	unsigned int	in_word;
 
-	i = 0;
 	count = 0;
-	while (i < len)
+	in_word = 0;
+	while (*s)
 	{
-		while (i < len)
+		if (*s != c)
 		{
-			if (ft_strchr(&c, s[i]) == NULL)
-				break ;
-			i++;
+			if (!in_word)
+			{
+				count++;
+				in_word = 1;
+			}
 		}
-		old_i = i;
-		while (i < len)
+		else
 		{
-			if (ft_strchr(&c, s[i]) != NULL)
-				break ;
-			i++;
+			in_word = 0;
 		}
-		if (i > old_i)
-			count++;
+		s++;
 	}
 	return (count);
 }
@@ -53,24 +50,29 @@ void	ft_word_len(char const *s, size_t *start, size_t *end, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	size_t	start;
-	size_t	end;
-	int		words;
-	char	**str;
+	unsigned int	i;
+	size_t			start;
+	size_t			end;
+	unsigned int	words;
+	char			**str;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	start = 0;
 	end = 0;
-	words = ft_number_of_words(s, c, ft_strlen(s));
-	str = (char **)malloc(sizeof(char *) * (words + 1));
-	if (str == NULL)
+	words = ft_number_of_words(s, c);
+	str = (char **)malloc(sizeof(*str) * (words + 1));
+	if (!str)
 		return (NULL);
 	while (i < words)
 	{
 		ft_word_len(s, &start, &end, c);
-		str[i] = ft_substr(s, start, end - start - 1);
+		str[i] = ft_substr(s, start, end - start);
 		i++;
+		if (!str[i])
+			free(str);
 	}
+	str[i] = NULL;
 	return (str);
 }

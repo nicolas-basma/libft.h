@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 18:12:40 by febasma           #+#    #+#             */
-/*   Updated: 2023/09/28 19:28:10 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/25 23:56:38 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,3 @@ void	*ft_calloc(size_t nitems, size_t size)
 	ft_bzero(ptr, nitems * size);
 	return (ptr);
 }
-
-/*int	main(void)
-{
-	char str[] = "Hello World";
-	int *a;
-
-	a = calloc(6, sizeof(char));
-
-	//ft_calloc(str, 6);
-	printf("%s", str);
-	return (0);
-}*/
