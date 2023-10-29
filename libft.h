@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 16:32:18 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/29 17:55:35 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/29 20:12:32 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include <locale.h>
 
 typedef struct s_list
 {
