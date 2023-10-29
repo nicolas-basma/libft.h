@@ -6,24 +6,25 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 16:32:18 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/29 17:30:23 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/29 17:55:35 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdarg.h>
 # include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
 
-struct				s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}					s_list;
+}					t_list;
 
 int					ft_atoi(const char *str);
 void				ft_bzero(void *str, size_t n);
@@ -59,4 +60,14 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+int					ft_lstsize(t_list *list);
+t_list				*ft_lstnew(void *content);
+void				ft_lstadd_front(t_list **list, t_list *new);
+void				ft_lstadd_back(t_list **list, t_list *new);
+t_list				*ft_lstlast(t_list *list);
+void				ft_lstdelone(t_list *list, void (*del)(void *));
+void				ft_lstclear(t_list **list, void (*del)(void *));
+void				ft_lstiter(t_list *list, void (*f)(void *));
+t_list				*ft_lstmap(t_list *list, void *(*f)(void *),
+						void (*del)(void *));
 #endif
