@@ -6,14 +6,13 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 18:57:50 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/17 19:16:37 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/31 12:04:42 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;
@@ -36,13 +35,3 @@ int	ft_atoi(char *str)
 	}
 	return (res * sign);
 }
-
-// int main()
-// {
-//     char str[] = "    +   4156";
-//     int i = ft_atoi(str);
-//     int j = atoi(str);
-//     printf("%d\n", i);
-//     printf("%d\n", j);
-//     return (0);
-// }
