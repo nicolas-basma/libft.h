@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 17:54:33 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/30 08:33:49 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/31 11:41:47 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 t_list	*ft_lstlast(t_list *list)
 {
-	t_list	*tmp;
+	t_list	*temp;
 
-	tmp = list;
-	while (tmp->next != NULL)
-		tmp = tmp->next;
-	return (tmp);
+	if (!list)
+		return (NULL);
+	temp = list;
+	while (temp->next != NULL)
+		temp = temp->next;
+	return (temp);
 }
