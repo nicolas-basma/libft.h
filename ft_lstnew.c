@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 17:33:13 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/29 21:00:11 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/30 15:22:43 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,4 @@ t_list	*ft_lstnew(void *content)
 	new->content = content;
 	new->next = NULL;
 	return (new);
-}
-
-int	main(void)
-{
-	t_list	*list;
-	t_list	*new;
-
-	list = ft_lstnew("Hello");
-	new = ft_lstnew("World");
-	ft_lstadd_back(&list, new);
-	printf("%s\n", ft_lstlast(list)->content);
-	return (0);
 }

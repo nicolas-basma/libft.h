@@ -6,20 +6,20 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 16:32:18 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/29 20:12:32 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/30 15:30:33 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <locale.h>
 # include <stdarg.h>
 # include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
-# include <locale.h>
 
 typedef struct s_list
 {
