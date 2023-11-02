@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 17:54:58 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/31 11:23:35 by febasma          ###   ########.fr       */
+/*   Updated: 2023/10/31 14:46:40 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,25 @@
 
 t_list	*ft_lstmap(t_list *list, void *(*f)(void *), void (*del)(void *))
 {
+	t_list	*new_list;
 	t_list	*new;
-	t_list	*temp;
+	void	*content;
 
 	if (!list || !f || !del)
 		return (NULL);
-	new = NULL;
+	new_list = NULL;
 	while (list)
 	{
-		temp = ft_lstnew((*f)(list->content));
-		if (!temp)
+		content = (*f)(list->content);
+		new = ft_lstnew(content);
+		if (!new)
 		{
-			ft_lstclear(&new, del);
+			(*del)(content);
+			ft_lstclear(&new_list, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&new, temp);
+		ft_lstadd_back(&new_list, new);
 		list = list->next;
 	}
-	return (new);
+	return (new_list);
 }
