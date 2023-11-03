@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 17:33:13 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/31 14:37:38 by febasma          ###   ########.fr       */
+/*   Updated: 2023/11/03 18:34:10 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,10 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;
 
-	if (!content)
-	{
-		new = (t_list *)malloc(sizeof(t_list));
-		if (!new)
-			return (NULL);
-		new->content = content;
-		new->next = NULL;
-		return (new);
-	}
 	new = (t_list *)malloc(sizeof(t_list));
 	if (!new)
 		return (NULL);
-	new->content = content;
-	new->next = NULL;
+	(*new).content = content;
+	(*new).next = NULL;
 	return (new);
 }
