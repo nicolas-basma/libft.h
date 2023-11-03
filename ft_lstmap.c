@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 17:54:58 by febasma           #+#    #+#             */
-/*   Updated: 2023/11/03 19:06:36 by febasma          ###   ########.fr       */
+/*   Updated: 2023/11/03 19:20:16 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_list	*ft_lstmap(t_list *list, void *(*f)(void *), void (*del)(void *))
 	tmp = list;
 	while (tmp)
 	{
-		value = (*f)(list->content);
+		value = (*f)(tmp->content);
 		new = ft_lstnew(value);
 		if (!new)
 		{
