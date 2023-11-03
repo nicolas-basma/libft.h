@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 17:54:06 by febasma           #+#    #+#             */
-/*   Updated: 2023/11/03 18:59:09 by febasma          ###   ########.fr       */
+/*   Updated: 2023/11/03 19:17:50 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_lstiter(t_list *list, void (*f)(void *))
 	tmp = list;
 	while (tmp)
 	{
-		(*f)(list->content);
+		(*f)(tmp->content);
 		tmp = tmp->next;
 	}
 }
