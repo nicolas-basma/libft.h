@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
+/*   By: febasma <febasma@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 17:53:02 by febasma           #+#    #+#             */
-/*   Updated: 2023/11/03 19:06:01 by febasma          ###   ########.fr       */
+/*   Updated: 2023/11/06 23:23:50 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ void	ft_lstadd_back(t_list **list, t_list *new)
 	else
 	{
 		last = ft_lstlast(*list);
-		last->next = new;
+		(*last).next = new;
 	}
 }
