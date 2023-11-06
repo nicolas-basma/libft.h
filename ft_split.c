@@ -6,7 +6,7 @@
 /*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 16:47:29 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/26 00:40:44 by febasma          ###   ########.fr       */
+/*   Updated: 2023/11/05 20:45:54 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,7 @@ int	ft_number_of_words(char const *s, char c)
 			}
 		}
 		else
-		{
 			in_word = 0;
-		}
 		s++;
 	}
 	return (count);
@@ -46,6 +44,19 @@ void	ft_word_len(char const *s, size_t *start, size_t *end, char c)
 	*end = *start;
 	while (s[*end] != c && s[*end] != '\0')
 		*end += 1;
+}
+
+void	ft_free(char **str)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		free(str[i]);
+		i++;
+	}
+	free(str);
 }
 
 char	**ft_split(char const *s, char c)
@@ -69,9 +80,9 @@ char	**ft_split(char const *s, char c)
 	{
 		ft_word_len(s, &start, &end, c);
 		str[i] = ft_substr(s, start, end - start);
-		i++;
 		if (!str[i])
-			free(str);
+			ft_free(str);
+		i++;
 	}
 	str[i] = NULL;
 	return (str);
