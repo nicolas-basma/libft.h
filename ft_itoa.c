@@ -3,16 +3,48 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
+/*   By: febasma <febasma@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 13:41:39 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/25 22:37:12 by febasma          ###   ########.fr       */
+/*   Updated: 2023/11/06 23:20:22 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_switch(char *s, int a, int b)
+static char	*ft_special_number(int n)
+{
+	if (n == 0)
+		return (ft_strdup("0"));
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	return (NULL);
+}
+
+static int	ft_abs(int n)
+{
+	return (n * -1);
+}
+
+static int	ft_size_memory(int n)
+{
+	int	i;
+
+	i = 1;
+	if (n < 0)
+	{
+		i++;
+		n = ft_abs(n);
+	}
+	while (n / 10 > 0)
+	{
+		n /= 10;
+		i++;
+	}
+	return (i);
+}
+
+static void	ft_switch(char *s, int a, int b)
 {
 	char	c;
 
@@ -24,62 +56,27 @@ void	ft_switch(char *s, int a, int b)
 	}
 }
 
-char	*ft_special(int n)
-{
-	if (n == 0)
-		return (ft_strdup("0"));
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	return (NULL);
-}
-
-int	absolut(int n)
-{
-	int	sign;
-
-	sign = -1;
-	return (n * sign);
-}
-
-int	memory(int n)
-{
-	int	i;
-
-	i = 1;
-	if (n < 0)
-	{
-		i++;
-		n = absolut(n);
-	}
-	while (n / 10 > 0)
-	{
-		n /= 10;
-		i++;
-	}
-	return (i);
-}
-
 char	*ft_itoa(int n)
 {
 	int		i;
-	int		j;
-	int		k;
+	int		cpy_n;
+	int		n_to_chr;
 	char	*str;
 
 	i = 0;
-	k = n;
+	cpy_n = n;
 	if (n == 0 || n == -2147483648)
-		return (ft_special(n));
-	if (n < 0)
-		k = absolut(k);
-	str = malloc(sizeof(char) * memory(n) + 1);
+		return (ft_special_number(n));
+	str = malloc(sizeof(char) * ft_size_memory(cpy_n) + 1);
 	if (!str)
 		return (NULL);
-	while (k)
+	if (n < 0)
+		cpy_n = ft_abs(cpy_n);
+	while (cpy_n)
 	{
-		j = k % 10;
-		str[i++] = 48 + j;
-		k = k / 10;
+		n_to_chr = cpy_n % 10;
+		str[i++] = 48 + n_to_chr;
+		cpy_n = cpy_n / 10;
 	}
 	if (n < 0)
 		str[i++] = '-';
