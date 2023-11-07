@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
+/*   By: febasma <febasma@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 18:57:50 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/31 12:04:42 by febasma          ###   ########.fr       */
+/*   Updated: 2023/11/06 22:09:26 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,22 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
 	int	sign;
-	int	res;
+	int	num;
 
-	i = 0;
 	sign = 1;
-	res = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
-		|| str[i] == '\v' || str[i] == '\r' || str[i] == '\f')
-		i++;
-	if (str[i] == '-')
-		sign = -1;
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] >= '0' && str[i] <= '9')
+	num = 0;
+	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\v'
+		|| *str == '\r' || *str == '\f')
+		str++;
+	if (*str == '-')
+		sign *= -1;
+	if (*str == '-' || *str == '+')
+		str++;
+	while (*str >= 48 && *str <= 57)
 	{
-		res = res * 10 + str[i] - '0';
-		i++;
+		num = num * 10 + *str - 48;
+		str++;
 	}
-	return (res * sign);
+	return (num * sign);
 }

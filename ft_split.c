@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
+/*   By: febasma <febasma@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 16:47:29 by febasma           #+#    #+#             */
-/*   Updated: 2023/11/05 20:45:54 by febasma          ###   ########.fr       */
+/*   Updated: 2023/11/07 11:54:09 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_number_of_words(char const *s, char c)
+static int	ft_number_of_words(char const *s, char c)
 {
 	unsigned int	count;
 	unsigned int	in_word;
@@ -36,7 +36,7 @@ int	ft_number_of_words(char const *s, char c)
 	return (count);
 }
 
-void	ft_word_len(char const *s, size_t *start, size_t *end, char c)
+static void	ft_word_len(char const *s, size_t *start, size_t *end, char c)
 {
 	*start = *end;
 	while (s[*start] == c)
@@ -46,7 +46,7 @@ void	ft_word_len(char const *s, size_t *start, size_t *end, char c)
 		*end += 1;
 }
 
-void	ft_free(char **str)
+static void	**ft_free(char **str)
 {
 	unsigned int	i;
 
@@ -57,6 +57,7 @@ void	ft_free(char **str)
 		i++;
 	}
 	free(str);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -80,8 +81,11 @@ char	**ft_split(char const *s, char c)
 	{
 		ft_word_len(s, &start, &end, c);
 		str[i] = ft_substr(s, start, end - start);
-		if (!str[i])
+		if (!str)
+		{
 			ft_free(str);
+			return (NULL);
+		}
 		i++;
 	}
 	str[i] = NULL;
