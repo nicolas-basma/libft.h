@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: febasma <nicobasma_@hotmail.com>           +#+  +:+       +#+        */
+/*   By: febasma <febasma@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 19:30:11 by febasma           #+#    #+#             */
-/*   Updated: 2023/10/05 16:17:29 by febasma          ###   ########.fr       */
+/*   Updated: 2023/11/07 14:05:34 by febasma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,3 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-
-// int main()
-// {
-// 	char str[] = "Hello World";
-// 	int i = ft_strlen(str);
-// 	printf("%i", i);
-// 	return (0);
-// }
